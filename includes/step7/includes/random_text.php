@@ -4,6 +4,6 @@
 
     $i = random_int(0, count($text)-1);
 
-    $selectedText = "$text[$i]";
+    $selectedText = $text[$i];
 
 ?>

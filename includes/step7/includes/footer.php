@@ -19,8 +19,22 @@
 
     ?>
 
+    <?php
+
+        if ($currentPage == 'about.php') {
+
+            $link = '<a href="#">Privacy Policy</a>';
+
+        } else {
+
+            $link = '';
+
+        }
+
+    ?>
+
     <?php // il <? (short echo tag) è una maniera più breve per scrivere il tag PHP ?>
 
-    <p>&copy; <?= $output ?> Davide Corpus</p>
+    <p>&copy; <?= $output ?> Davide Corpus <?= $link ?></p>
 
 </footer>
