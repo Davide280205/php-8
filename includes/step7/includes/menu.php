@@ -6,5 +6,6 @@
         <li><a href="blog.php" <?php if ($currentPage == 'blog.php') {echo 'id="here"';} ?>>Journal</a></li>
         <li><a href="gallery.php" <?php if ($currentPage == 'gallery.php') {echo 'id="here"';} ?>>Gallery</a></li>
         <li><a href="contact_us.php" <?php if ($currentPage == 'contact_us.php') {echo 'id="here"';} ?>>Contact</a></li>
+        <li><a href="about.php" <?php if ($currentPage == 'about.php') {echo 'id="here"';} ?>>About</a></li>
     </ul>
 </nav>
