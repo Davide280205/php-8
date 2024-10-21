@@ -1,5 +1,5 @@
 <?php include './includes/title.php'; ?>
-<?php include './includes/random_image_01.php'; ?>
+<?php include './includes/random_image_02.php'; ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -27,8 +27,8 @@
         <h2>A Journey through Japan with PHP</h2>
         <p>Ut enim ad minim veniam, quis nostrud exercitation consectetur adipisicing elit. Velit esse cillum dolore ullamco laboris nisi in reprehenderit in voluptate. Mollit anim id est laborum. Sunt in culpa duis aute irure dolor excepteur sint occaecat.</p>
         <figure>
-            <img src="<?= $selectedImage ?>" alt="Maiko&mdash;trainee geishas in Kyoto" width="340" height="205" class="picBorder">
-            <figcaption>Maiko&mdash;trainee geishas in Kyoto</figcaption>
+            <img src="<?= $selectedImage ?>" alt="Random Image" width="340" height="205" class="picBorder">
+            <figcaption><?= $caption ?></figcaption>
         </figure>
         <p>Eu fugiat nulla pariatur. Ut labore et dolore magna aliqua. Cupidatat non proident, quis nostrud exercitation ut enim ad minim veniam.</p>
         <p>Consectetur adipisicing elit, duis aute irure dolor. Lorem ipsum dolor sit amet, ut enim ad minim veniam, consectetur adipisicing elit. Duis aute irure dolor ut aliquip ex ea commodo consequat.</p>
