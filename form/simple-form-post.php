@@ -9,7 +9,7 @@
 
     <!-- l'action invia la richiesta (il submit) al file "welcome-get.php" -->
 
-    <form action="welcome-get.php" method="GET">
+    <form action="welcome-get.php" method="POST">
 
         Name: <input type="text" name="name"></input><br>
         E-mail: <input type="text" name="email"></input><br>
