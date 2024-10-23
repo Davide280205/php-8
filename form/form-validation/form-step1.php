@@ -19,7 +19,7 @@
 
 <h2>PHP Form Validation Example</h2>
 
-<!-- la funzione echo htmlspecialchars converte i type HTML nel relativo valore letterale -->
+<!-- la funzione htmlspecialchars converte i type HTML nel relativo valore letterale -->
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
