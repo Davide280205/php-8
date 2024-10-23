@@ -10,7 +10,16 @@
 
 
 <?php
-// script per il form
+
+  // inizializza le variabili a valore vuoto
+
+  $name = $email = $gender = $comment = $website = "";
+
+  if ($_SERVER["REQUEST_METHOD"]== "POST") {
+
+    $name = test_input($_POST["name"]);
+
+  }
 
 ?>
 
