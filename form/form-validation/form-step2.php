@@ -15,6 +15,72 @@ $nameErr = $emailErr = $genderErr = $websiteErr = "";
 
 $name = $email = $gender = $comment = $website = "";
 
+// controllo degli errori
+
+  if ($_SERVER["REQUEST_METHOD"]== "POST") {
+
+    // controllo su campo nome
+
+    if (empty($_POST["name"])) {
+
+      $nameErr = "Nome è obbligatorio";
+
+    } else {
+
+      $name = test_input($_POST["name"]);
+
+    };
+
+    // controllo su campo email
+  
+    if (empty($_POST["email"])) {
+  
+      $emailErr = "E-mail è obbligatorio";
+  
+    } else {
+  
+      $email = test_input($_POST["email"]);
+  
+    };
+
+    // controllo su campo website
+  
+    if (empty($_POST["website"])) {
+  
+      $website = "";
+  
+    } else {
+  
+      $website = test_input($_POST["website"]);
+  
+    };
+
+    // controllo su campo comment
+
+    if (empty($_POST["comment"])) {
+
+      $comment = "";
+    
+    } else {
+    
+      $comment = test_input($_POST["comment"]);
+    
+    };
+
+    // controllo su campo gender
+
+    if (empty($_POST["gender"])) {
+
+      $genderErr = "Genere è obbligatorio";
+        
+    } else {
+        
+      $gender = test_input($_POST["gender"]);
+        
+    };
+
+  };
+
 
 
 function test_input($data) {
