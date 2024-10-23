@@ -25,6 +25,10 @@
 
   }
 
+  // trim = rimuove gli spazi bianchi da entrambe le parti di una stringa
+  // striplashes = rimuove gli backslash (\)
+  // htmlspecialchars = ad esempio se uno inserice un < > quel codice viene CONVERTITO in un testo  
+
   function test_input($data) {
 
     $data = trim($data);
