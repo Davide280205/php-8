@@ -14,3 +14,5 @@
     
 </body>
 </html>
+
+<!-- L'informazione che è spedita con un form GET (echo $_GET) è visibile a tutti, il metodo GET limita anche la quantità dell'informazione spedita (max 2000 caratteri)-->
