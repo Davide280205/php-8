@@ -22,9 +22,9 @@
 
         $fileToLoad = "skills";
 
-    };
+    }
 
-    include_once "view/$fileToLoad.php";
+    include_once "views/$fileToLoad.php";
     $pageData->content .= $info;
 
     require "templates/page.php";
