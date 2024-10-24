@@ -21,6 +21,7 @@
         // il .= AGGIUNGE il paragrafo (in questo caso)
 
         $pageData->content .= "<p>Presto caricheremo $fileToLoad.php</p>";
+        // $pageData->content .= "<p>Benvenuti!</p>";
 
     }
 
