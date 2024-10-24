@@ -18,10 +18,7 @@
 
         $fileToLoad = $_GET['page'];
 
-        // il .= AGGIUNGE il paragrafo (in questo caso)
-
-        $pageData->content .= "<p>Presto caricheremo $fileToLoad.php</p>";
-        // $pageData->content .= "<p>Benvenuti!</p>";
+        include_once "views/$fileToLoad.php";
 
     }
 
