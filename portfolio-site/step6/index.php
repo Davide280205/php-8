@@ -3,8 +3,11 @@
     // stampa i link di navigation.php
 
     include_once "views/navigation.php";
+    include_once "classes/Page_Data.class.php";
+
     $pageData = new stdClass();
     $pageData->title = "Davide Corpus Porfolio";
+    $pageData->css = "<link href='css/layout.css' rel='stylesheet'/>";
     // mette la navigazione nel contenuto
     $pageData->content = $nav;
 
