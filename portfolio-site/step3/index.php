@@ -10,6 +10,8 @@
 
     // aggiunta
 
+    // isset controlla se una variabile ESISTE
+
     $navigationIsClicked = isset($_GET['page']);
 
     if ($navigationIsClicked) {
