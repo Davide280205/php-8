@@ -17,10 +17,15 @@
     if ($navigationIsClicked) {
 
         $fileToLoad = $_GET['page'];
-        include_once "views/$fileToLoad.php";
-        $pageData->content .= $info;
 
-    }
+    } else {
+
+        $fileToLoad = "skills";
+
+    };
+
+    include_once "view/$fileToLoad.php";
+    $pageData->content .= $info;
 
     require "templates/page.php";
     echo $page;
