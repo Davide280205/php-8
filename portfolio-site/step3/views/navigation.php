@@ -1,5 +1,7 @@
 <?php
 
+    // gli href sono degli URL VARIABILI
+
     $nav = "
     
     <nav>
