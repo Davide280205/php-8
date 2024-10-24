@@ -15,7 +15,7 @@
     if ($navigationIsClicked) {
 
         $fileToLoad = $_GET['page'];
-        $pageData->content .= "<p>Presto caricheremo $fileToLoad.php</p>"
+        $pageData->content .= "<p>Presto caricheremo $fileToLoad.php</p>";
 
     }
 
