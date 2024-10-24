@@ -17,8 +17,8 @@
     if ($navigationIsClicked) {
 
         $fileToLoad = $_GET['page'];
-
         include_once "views/$fileToLoad.php";
+        $pageData->content .= $info;
 
     }
 
