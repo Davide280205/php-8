@@ -10,13 +10,19 @@
 </head>
 <body>
 
-    <?php require './includes/menu.php'; ?>
+    <div class="content">
 
-    <p>Sono Davide ho 19 anni nn lavoro, sono disoccupato e studio presso l'istituto del Civiform a Cividale del Friuli</p>
+        <?php require './includes/menu.php'; ?>
 
+        <h1>Portfoglio</h1>
 
+        <h3>Questo è il mio sito portfoglio:</h3>
 
-    <?php require './includes/footer.php'; ?>
+        <p>Un sito porfoglio è un sito dinamico</p>
+
+        <?php require './includes/footer.php'; ?>
+
+    </div>
     
 </body>
 </html>
