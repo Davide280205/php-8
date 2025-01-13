@@ -1,17 +1,16 @@
 <?php
 
 $page = "
+<!DOCTYPE html>
+<html>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <title>$pageData->title</title>
-    </head>
-    <body>
+<head>
+<title>$pageData->title</title>
+</head>
 
-    $pageData->content
-
-    </body>
-    </html> ";
+<body>
+$pageData->content
+</body>
+</html>"
 
 ?>

@@ -11,7 +11,9 @@ $navigatioIsClicked = isset($_GET['page']);
 if ($navigatioIsClicked) {
 
     $fileToLoad = $_GET['page'];
-    $pageData->content .= "<p>presto caricheremo $fileToLoad</p>";
+    include_once "views/$fileToLoad.php";
+
+    $pageData->content .= $info;
 }
 
 require "templates/page.php";

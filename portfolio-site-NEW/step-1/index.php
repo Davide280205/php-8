@@ -1,11 +1,11 @@
 <?php
 
-    $pageData = new stdClass();
-    $pageData->title = "Nuovo sito portfolio";
-    $pageData->content = "<h1>Benvenuti!</h1>";
+$pageData = new stdClass();
+$pageData->title = "Nuovo sito portfolio";
+$pageData->content = "<h1>Benvenuti!</h1>";
 
-    require "templates/page.php";
+require "templates/page.php";
 
-    echo $page;
+echo $page
 
 ?>
