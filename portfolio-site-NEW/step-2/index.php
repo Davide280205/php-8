@@ -1,8 +1,8 @@
 <?php
-
+    include_once "views/navigation.php"
     $pageData = new stdClass();
     $pageData->title = "Nuovo sito portfolio";
-    $pageData->content = "<h1>Benvenuti!</h1>";
+    $pageData->content = $nav;
 
     require "templates/page.php";
 
