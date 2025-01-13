@@ -1,7 +1,7 @@
 <?php
 include_once "views/navigation.php";
 $pageData = new stdClass();
-$pageData->title = "Lars Godeassi portfolio";
+$pageData->title = "Corpus Davide portfolio";
 //mette la navigazione nel contenuto
 $pageData->content = $nav;
 

@@ -6,7 +6,7 @@ $pageData = new Page_Data();
 
 $pageData->css = "<link href='css/layout.css' rel='stylesheet'>";
 
-$pageData->title = "Lars Godeassi portfolio";
+$pageData->title = "Corpus Davide portfolio";
 //mette la navigazione nel contenuto
 $pageData->content = $nav;
 
