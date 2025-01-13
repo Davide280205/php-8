@@ -3,8 +3,8 @@
 $nav = "
 
     <nav>
-        <a href="">Skills</a>
-        <a href="">Progetti</a>
+        <a href=''>Skills</a>
+        <a href=''>Progetti</a>
     </nav>
 
 ";
