@@ -1,0 +1,6 @@
+<?php
+
+    $pageData = new stdClass();
+
+
+?>
