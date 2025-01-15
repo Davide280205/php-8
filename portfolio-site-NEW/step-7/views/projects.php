@@ -6,17 +6,17 @@ $info = "<h1>I miei progetti</h1>
 <li>Secondo progetto</li>
 </ul>";
 
-$style = "
+$style ="
 
     <style>
 
-        nav a:nth-child(2){
+        nav a:nth-child(3){
 
-            text-decoration= underline;
+            text-decoration: underline;
 
         }
     
     </style>
 
-"
+";
 ?>

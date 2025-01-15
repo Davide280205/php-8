@@ -25,9 +25,10 @@ if ($navigatioIsClicked) {
 include_once "views/$fileToLoad.php";
 
 $pageData->content .= $info;
+$pageData->embeddedStyle = $style;
 
 require "templates/page.php";
 
-echo $page
+echo $page;
 
 ?>
