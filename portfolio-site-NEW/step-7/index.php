@@ -1,5 +1,6 @@
 <?php
 include_once "views/navigation.php";
+include_once "views/footer.php";
 include_once "classes/Page_Data.class.php";
 
 $pageData = new Page_Data();
@@ -9,6 +10,9 @@ $pageData->css = "<link href='css/layout.css' rel='stylesheet'>";
 $pageData->title = "Corpus Davide portfolio";
 //mette la navigazione nel contenuto
 $pageData->content = $nav;
+
+//footer
+$pageData->footer = $footer;
 
 //intercetta la variabile URL
 $navigatioIsClicked = isset($_GET['page']);

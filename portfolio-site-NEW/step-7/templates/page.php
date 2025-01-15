@@ -13,6 +13,7 @@ $pageData->embeddedStyle
 <body>
 $pageData->content
 </body>
+$pageData->footer
 </html>"
 
 ?>
