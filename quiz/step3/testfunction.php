@@ -8,5 +8,6 @@
 
 
     getParagraph();
+    getParagraph();
 
 ?>
