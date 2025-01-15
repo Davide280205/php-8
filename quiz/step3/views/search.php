@@ -1,5 +1,7 @@
 <?php
 
+    // crea un form di ricerca su bing
+
     $info = "
     
     <form method='get' action='https://www.bing.com/search'>
