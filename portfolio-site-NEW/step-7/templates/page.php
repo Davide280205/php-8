@@ -5,7 +5,8 @@ $page = "
 <html>
 
 <head>
-$pageData->css
+$pageData->css;
+$pageData->embedded;
 <title>$pageData->title</title>
 </head>
 

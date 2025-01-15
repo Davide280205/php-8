@@ -5,4 +5,18 @@ $info = "<h1>I miei progetti</h1>
 <li>Primo progetto</li>
 <li>Secondo progetto</li>
 </ul>";
+
+$style = "
+
+    <style>
+
+        nav a:nth-child(2){
+
+            text-decoration= underline;
+
+        }
+    
+    </style>
+
+"
 ?>
