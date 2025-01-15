@@ -10,6 +10,25 @@ $pageData->content = $nav;
 
 $pageData->content .= "<div>...ed anche un form, proprio qui.</div>";
 
+//aggiunta
+
+$navigationIsClicked = isset($_GET['page']);
+
+if ($navigationIsClicked){
+
+    $fileToLoad = $_GET['page'];
+
+}else{
+
+    $fileToLoad = "search";
+
+}
+
+    include_once "views/$fileToLoad.php";
+
+    $pageData->content .= $info;
+
+
 require "templates/page.php";
 echo $page;
 ?>
