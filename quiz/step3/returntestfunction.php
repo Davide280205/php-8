@@ -7,7 +7,11 @@
     }
 
     $output = getParagraph();
+
+    $output .= "<h1>Titolo principale</h1>";
     
     echo $output;
+
+    echo getParagraph();
 
 ?>
