@@ -1,0 +1,5 @@
+<?php
+
+    $info = "un quiz";
+
+?>

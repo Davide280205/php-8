@@ -22,11 +22,11 @@ if ($navigationIsClicked){
 
     $fileToLoad = "search";
 
-}
+};
 
-    include_once "views/$fileToLoad.php";
+include_once "views/$fileToLoad.php";
 
-    $pageData->content .= $info;
+$pageData->content .= $info;
 
 
 require "templates/page.php";
