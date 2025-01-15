@@ -1,6 +1,6 @@
 <?php
 
-include_once "views/navigation.php"
+include_once "views/navigation.php";
 include_once "classes/Page_Data.class.php";
 $pageData = new Page_Data();
 $pageData->title = "Form with php";
