@@ -17,7 +17,7 @@
 
         $response = "<p>Hai cliccato $answer</p>";
 
-        $response .= "<p><a href='index.php?page=quiz'Vuoi riprovare?</a></p>";
+        $response .= "<p><a href='index.php?page=quiz'>Vuoi riprovare?</a></p>";
 
         return $response;
 
