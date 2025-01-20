@@ -13,7 +13,7 @@ $info= "
 
 </select>
 
-<input type='submit' name='quiz-submitted' value='post' />
+<input type='submit' name='quiz-submitted' value='Invia' />
 
 </form>
 
