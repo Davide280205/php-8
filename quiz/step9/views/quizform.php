@@ -3,25 +3,15 @@ $info= "
 
 <form method='post' action='index.php?page=quiz'>
 
-    <p>E' difficile o divertente imparare il PHP?</p>
+    <p>Peso e altezza</p>
 
-<select name='answer'>
+    <input type='number' placeholder='peso' name='peso'/>
 
-    <option value='yes'> Si è difficile </option>
+<br>
 
-    <option value='no'> No è divertente </option>
+    <input type='number' placeholder='altezza' name='altezza'/>
 
-</select>
-
-    <p>Ti piace la pizza?</p>
-
-<select name='answer2'>
-
-    <option value='yes'> Si mi piace </option>
-
-    <option value='no'> No non mi piace </option>
-
-</select>
+<br>
 
 <input type='submit' name='quiz-submitted' value='Invia' />
 

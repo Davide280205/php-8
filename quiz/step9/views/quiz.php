@@ -4,9 +4,9 @@
 
     if ($quizIsSubmitted) {
 
-        $answer = $_POST["answer"];
-        $answer2 = $_POST["answer2"];
-        $info = showQuizResponse($answer, $answer2);
+        $peso = $_POST["peso"];
+        $altezza = $_POST["altezza"];
+        $info = showQuizResponse($peso, $altezza);
 
         $info .= "<pre>";
 
@@ -20,13 +20,13 @@
 
     }
 
-    function showQuizResponse( string $answer, string $answer2 ) : string{
+    function showQuizResponse( string $peso, string $altezza ) : string{
 
-        $response = "<p>Hai cliccato $answer e $answer2</p>";
+        $bmi = $peso / (2*($altezza / 100));
 
-        $response .= "<p><a href='index.php?page=quiz'>Vuoi riprovare?</a></p>";
+        $bmi .= "Il tuo bmi è $bmi";
 
-        return $response;
+        return $bmi;
 
     }
 
