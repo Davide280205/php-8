@@ -14,4 +14,6 @@ $output .= getParagraph("... e quest'altro nell'ultimo paragrafo");
 
 echo $output;
 
+echo getParagraph("...ma volgio finire con questo paragrafo");
+
 ?>
