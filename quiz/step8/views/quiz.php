@@ -5,7 +5,8 @@
     if ($quizIsSubmitted) {
 
         $answer = $_POST["answer"];
-        $info = showQuizResponse($answer);
+        $answer2 = $_POST["answer2"];
+        $info = showQuizResponse($answer, $answer2);
 
         $info .= "<pre>";
 
@@ -19,9 +20,9 @@
 
     }
 
-    function showQuizResponse( string $answer ) : string{
+    function showQuizResponse( string $answer, string $answer2 ) : string{
 
-        $response = "<p>Hai cliccato $answer</p>";
+        $response = "<p>Hai cliccato $answer e $answer2</p>";
 
         $response .= "<p><a href='index.php?page=quiz'>Vuoi riprovare?</a></p>";
 

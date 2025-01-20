@@ -13,6 +13,16 @@ $info= "
 
 </select>
 
+    <p>Ti piace la pizza?</p>
+
+<select name='answer2'>
+
+    <option value='yes'> Si mi piace </option>
+
+    <option value='no'> No non mi piace </option>
+
+</select>
+
 <input type='submit' name='quiz-submitted' value='Invia' />
 
 </form>
