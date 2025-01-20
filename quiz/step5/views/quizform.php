@@ -9,7 +9,7 @@ $info= "
 
     <option value='yes'> Si è difficile </option>
 
-    <option value='yes'> No è divertente </option>
+    <option value='no'> No è divertente </option>
 
 </select>
 
