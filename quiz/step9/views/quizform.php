@@ -12,6 +12,7 @@ $info= "
     <input type='number' placeholder='altezza' name='altezza'/>
 
 <br>
+<br>
 
 <input type='submit' name='quiz-submitted' value='Invia' />
 
