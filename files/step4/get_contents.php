@@ -10,6 +10,8 @@
     <?php
     
         echo nl2br(file_get_contents('C:/private/sonnet.txt'));
+
+        echo $sonnet[0];
         
     ?>
     
