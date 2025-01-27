@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Files</title>
-</head>
-<body>
+<?php
 
-    <?php
-    
-        $sonnet = file('C:/private/sonnet.txt');
+// prende il percorso del file
+$filename = 'C:/private/sonnet.txt';
 
-        echo $sonnet[0];
-        
-    ?>
-    
-</body>
-</html>
+// apre il file fopen sta per file open
+$file = fopen($filename, 'r');
+
+// legge il file fread sta per file read
+$contents = fread($file, filesize($filename));
+
+// chiude il file fclose sta per file close
+fclose($file);
+
+echo nl2br($contents);
+
+?>
