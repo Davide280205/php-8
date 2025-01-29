@@ -3,7 +3,17 @@
 
 <?php
 
+    if (isset($_POST['putContents'])) {
 
+        // 'w' sta per write (scrive all'interno del file)
+
+        $file = fopen('C:/private/write.txt', 'w');
+
+        fwrite($file, $_POST['contents']);
+
+        fclose($file);
+
+    };
 
 ?>
 
