@@ -6,7 +6,7 @@ $file = fopen($filename, 'r');
 
 $contents = '';
 
-while (feof($file)) {
+while (!feof($file)) {
 
     $contents .= fgets($file);
 
