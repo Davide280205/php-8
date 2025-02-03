@@ -1,0 +1,1 @@
+Un database è una collezione di dati organizzati, accessibile per via elettronica
