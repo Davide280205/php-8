@@ -10,3 +10,4 @@ Come si progetta un database:
 2) Creare una tabella per ogni gruppo dati;
 3) Usare la Primary key come Foreign Key nell'altra tabella per collegarle;
 4) Immagazzinare solo un dato per ogni campo.
+L'interfaccia grafica per dialogare con il database si chiama phpMyAdmin
