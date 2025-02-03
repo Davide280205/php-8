@@ -5,3 +5,8 @@ Una chiave principale non è necessaria che sia un numero ma deve essere unica.
 In una tabella c'è un ID, un nome e un cognome (pdf database -> terza foto).
 L'ID è la chiave principale.
 Un principio fondamentale dei database relazionali è spezzare informazioni complesse in parti più semplici e immagazzinare separatamente le diverse parti (vedi foto 3 di db.pdf).
+Come si progetta un database:
+1) Dare ad ogni record (linea) un identificatore unico (Primary key);
+2) Creare una tabella per ogni gruppo dati;
+3) Usare la Primary key come Foreign Key nell'altra tabella per collegarle;
+4) Immagazzinare solo un dato per ogni campo.
