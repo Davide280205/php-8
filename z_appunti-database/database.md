@@ -10,4 +10,10 @@ Come si progetta un database:
 2) Creare una tabella per ogni gruppo dati;
 3) Usare la Primary key come Foreign Key nell'altra tabella per collegarle;
 4) Immagazzinare solo un dato per ogni campo.
-L'interfaccia grafica per dialogare con il database si chiama phpMyAdmin
+L'interfaccia grafica per dialogare con il database si chiama phpMyAdmin.
+Nel database la parte finale 'ci' sta per case insensity.
+
+Utente phpMyAdmin:
+-username: pswrite;
+-hostname: local;
+-password: faina;
