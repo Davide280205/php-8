@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>The lastest news from Los Angeles Timess</h1>
+    <h1>The lastest news from Los Angeles Times</h1>
 
     <?php 
 
