@@ -31,6 +31,6 @@
 
         echo $e->getMessage();
 
-    }
+    };
 
 ?>
