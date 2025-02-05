@@ -5,4 +5,4 @@
 
         echo 'Connessione avvenuta con successo';
 
-    }
+    };
