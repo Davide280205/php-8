@@ -17,3 +17,8 @@ Utente phpMyAdmin:
 -username: pswrite;
 -hostname: local;
 -password: faina;
+
+CHAR -> max caratteri 255
+VARCHAR -> bisogna specificare il numero di caratteri, il massimo di caratteri è 65.535
+
+Per connettersi ad un database bisogna usare l'hostname, lo user e la password del database
