@@ -3,9 +3,9 @@
     function dbConnect($usertype){
 
         $host = 'localhost';
-        $db = 'phpsol',
+        $db = 'phpsol';
 
-        if ($usertype == 'read')
+        if ($usertype == 'read'){
 
             $user = 'psread';
             $pwd = 'lupo';
@@ -31,6 +31,8 @@
 
         echo $e->getMessage();
 
-    };
+    }
+
+    }
 
 ?>
