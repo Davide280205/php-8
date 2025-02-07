@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'includes/commection.php';
+    require_once 'includes/connection.php';
     $conn = dbConnect('read');
 
     // l'asterisco unisce tutto
@@ -11,7 +11,7 @@
     $result = $conn->query($sql);
 
     // nell'array mettere SEMPRE 2 perchè se c'è un errore è utile il terzo paragrafo
-    $error = $conn->errorInfo() [2];
+    $error = $conn->errorInfo()[2];
 
     if (!$error) {
 
@@ -26,7 +26,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PDO</title>
 </head>
 <body>
 
@@ -34,11 +34,11 @@
 
         if ($error){
 
-            echo "<p>$errror</p>";
+            echo "<p>$error</p>";
 
         } else {
 
-            echo "<p>Nella tabella ci sono $numRows righe</p>"
+            echo "<p>Nella tabella ci sono $numRows righe</p>";
 
         }
 
