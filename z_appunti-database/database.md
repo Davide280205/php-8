@@ -18,6 +18,10 @@ Utente phpMyAdmin:
 -hostname: local;
 -password: faina;
 
+-username: psread;
+-hostname: local;
+-password: lupo;
+
 CHAR -> max caratteri 255
 VARCHAR -> bisogna specificare il numero di caratteri, il massimo di caratteri è 65.535
 
