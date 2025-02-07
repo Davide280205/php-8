@@ -6,6 +6,7 @@
     // l'asterisco unisce tutto
 
     $sql = 'SELECT * FROM images';
+    $result = $conn->query($sql);
 
 ?>
 
