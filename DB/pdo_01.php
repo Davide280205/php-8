@@ -6,12 +6,20 @@
     // l'asterisco unisce tutto
 
     $sql = 'SELECT * FROM images';
+
+    // esegue la query e salva il risultato nella variabile $result
     $result = $conn->query($sql);
 
+    // nell'array mettere SEMPRE 2 perchè se c'è un errore è utile il terzo paragrafo
+    $error = $conn->errorInfo() [2];
+
+    if (!$error) {
+
+        $numRows = $result->rowCount();
+
+    }
+
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +29,20 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+
+        if ($error){
+
+            echo "<p>$errror</p>";
+
+        } else {
+
+            echo "<p>Nella tabella ci sono $numRows righe</p>"
+
+        }
+
+    ?>
     
 </body>
 </html>
