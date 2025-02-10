@@ -1,69 +1,71 @@
 <?php
 
-    require_once 'includes/connection.php';
-    require_once 'includes/utility_funcs.php';
-    $conn = dbConnect('read');
+require_once 'includes/connection.php';
+require_once 'includes/utility_funcs.php';
+$conn = dbConnect('read');
 
-    // l'asterisco unisce tutto
+$sql = 'SELECT * FROM images';
 
-    $sql = 'SELECT * FROM images';
+//esegue la query e salva il risultato in $result
+$result = $conn->query($sql);
 
-    // esegue la query e salva il risultato nella variabile $result
-    $result = $conn->query($sql);
+$error = $conn->errorInfo()[2];
 
-    // nell'array mettere SEMPRE 2 perchè se c'è un errore è utile il terzo paragrafo
-    $error = $conn->errorInfo()[2];
 
-    if (!$error) {
+if (!$error) {
 
-        $numRows = $result->rowCount();
 
-    }
+	$numRows = $result->rowCount();
+
+}
+
+
 
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 </head>
 <body>
 
-    <?php
 
-        if ($error){
+<?php
 
-            echo "<p>$error</p>";
+if ($error){
 
-        } else {
+	echo "<p>$error</p>";
 
-            echo "<p>Nella tabella ci sono $numRows righe</p>";
 
-    ?>
+} else { //non viene chiusa qui
 
-    <table>
+	echo "<p> Nella tabella ci sono $numRows righe</p>";
 
-        <tr>
-            <th>image_id</th>
-            <th>filename</th>
-            <th>caption</th>
-        </tr>
+?>
 
-    <?php foreach($conn->query($sql) as $row) { ?>
+<table>
 
-        <tr>
-            <td><?= $row['image_id'] ?></td>
-            <td><?= $row['filename'] ?></td>
-            <td><?= $row['caption'] ?></td>
-        </tr>
+	<tr>
+		<th>image_id</th>
+		<th>filename</th>
+		<th>caption</th>
+	</tr>
 
-    <?php } ?>
+	<?php foreach ($conn->query($sql) as $row) { ?>
 
-    </table>
+	<tr>
+		<td><?= $row['image_id'] ?></td>
+		<td><?= safe($row['filename']) ?></td>
+		<td><?= safe($row['caption']) ?></td>
+	</tr>
 
-    <?php } ?>
-    
+	<?php } ?>
+</table>
+
+<?php } //ma viene chiusa qui?>
 </body>
 </html>

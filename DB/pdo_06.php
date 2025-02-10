@@ -1,9 +1,10 @@
 <?php
 
 require_once 'includes/connection.php';
+require_once 'includes/utility_funcs.php';
 $conn = dbConnect('read');
 
-$sql = 'SELECT * FROM images';
+$sql = 'SELECT * FROM images WHERE image_id = 6';
 
 //esegue la query e salva il risultato in $result
 $result = $conn->query($sql);
@@ -23,12 +24,6 @@ if (!$error) {
 ?>
 
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +33,7 @@ if (!$error) {
 </head>
 <body>
 
+
 <?php
 
 if ($error){
@@ -45,17 +41,29 @@ if ($error){
 	echo "<p>$error</p>";
 
 
-} else {
+} else { //non viene chiusa qui
 
 	echo "<p> Nella tabella ci sono $numRows righe</p>";
 
-
-}
-
-
 ?>
 
+<table>
 
+	<tr>
+		<th>filename</th>
+		<th>caption</th>
+	</tr>
 
+	<?php foreach ($conn->query($sql) as $row) { ?>
+
+	<tr>
+		<td><?= $row['filename'] ?></td>
+		<td><?= safe($row['caption']) ?></td>
+	</tr>
+
+	<?php } ?>
+</table>
+
+<?php } //ma viene chiusa qui?>
 </body>
 </html>
