@@ -6,9 +6,9 @@
 
     }
 
-    $testo = "Ciao <b>mondo</b>";
+    // $testo = "Ciao <b>mondo</b>";
 
-    echo $testo;
+    // echo $testo;
 
         // la funzione htmlspecialchars serve a sanitizzare il codice
 

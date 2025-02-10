@@ -41,9 +41,29 @@
 
             echo "<p>Nella tabella ci sono $numRows righe</p>";
 
-        }
-
     ?>
+
+    <table>
+
+        <tr>
+            <th>image_id</th>
+            <th>filename</th>
+            <th>caption</th>
+        </tr>
+
+    <?php foreach($conn->query($sql) as $row) { ?>
+
+        <tr>
+            <td><?= $row['image_id'] ?></td>
+            <td><?= $row['filename'] ?></td>
+            <td><?= $row['caption'] ?></td>
+        </tr>
+
+    <?php } ?>
+
+    </table>
+
+    <?php } ?>
     
 </body>
 </html>
