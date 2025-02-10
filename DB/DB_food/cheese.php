@@ -1,10 +1,9 @@
 <?php
 
-require_once 'includes/connection.php';
-require_once 'includes/utility_funcs.php';
+require_once 'includes/connection_cheese.php';
 $conn = dbConnect('read');
 
-$sql = 'SELECT * FROM images WHERE caption LIKE "%maiko%"'; 
+$sql = 'SELECT * FROM cheeses'; 
 
 //esegue la query e salva il risultato in $result
 $result = $conn->query($sql);
@@ -50,17 +49,17 @@ if ($error){
 <table>
 
 	<tr>
-		<th>image_id</th>
-		<th>filename</th>
-		<th>caption</th>
+		<th>name</th>
+		<th>type</th>
+		<th>description</th>
 	</tr>
 
 	<?php foreach ($conn->query($sql) as $row) { ?>
 
 	<tr>
-		<td><?= $row['image_id'] ?></td>
-		<td><?= $row['filename'] ?></td>
-		<td><?= safe($row['caption']) ?></td>
+		<td><?= $row['name'] ?></td>
+		<td><?= $row['cheese_type'] ?></td>
+		<td><?= $row['description'] ?></td>
 	</tr>
 
 	<?php } ?>
