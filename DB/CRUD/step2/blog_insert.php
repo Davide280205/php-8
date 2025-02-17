@@ -7,21 +7,19 @@
         //creazione databse connection
         $conn = dbConnect('write');
 
-    }
-
     // creazione della query
 
-    $sql = 'INSERT INTO blog (title, article) VALUES(:title, :article)';
+    $sql = 'INSERT INTO blog (title, article) VALUES (:title, :article)';
 
     // il prepare è importante per la sicurezza del database: lui prepara una query sql pronta per l'esecuzione MA NON la esegue.
 
     $stmt = $conn->prepare($sql);
 
-    $stmt->bindParam(':title', $_POST['title'], PDO::PARAM_STRING);
-    $stmt->bindParam(':article', $_POST['article'], PDO::PARAM_STRING);
+    $stmt->bindParam(':title', $_POST['title'], PDO::PARAM_STR);
+    $stmt->bindParam(':article', $_POST['article'], PDO::PARAM_STR);
 
     $stmt->execute();
-    $OK = $stmr->rowCount();
+    $OK = $stmt->rowCount();
 
     if ($OK) {
 
@@ -30,15 +28,13 @@
         
     } else {
 
-        $error = $stmt->errorInfo();
+        $error = $stmt->errorInfo()[2];
 
     }
 
+}
+
 ?>
-
-
-
-
 
 
 <!DOCTYPE HTML>
