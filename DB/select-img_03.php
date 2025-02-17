@@ -57,6 +57,46 @@ popola una select con i nomi delle immagini contenuti in un DB
     </select>
     <input type="submit" name="go" value="Display">
 </form>
+
+<?php
+
+    if (isset($_GET['selected_img'])) {
+
+        $image_id = (int)$_GET['selected_img'];
+
+        $error = ($image_id === 0) ? true : false;
+
+        if (!$error) {
+
+            $sql = "SELECT filename, caption FROM images WHERE image_id = $image_id";
+            $result = $conn->query($sql);
+            $row = $result->fetch();
+
+// chiusura primo blocco php
+?>
+
+<figure>
+
+    <img src="images/<?= safe($row['filename']) ?>">
+    <figcaption><?= safe($row['caption']) ?></figcaption>
+
+</figure>
+
+<?php // chiusura blocco php
+
+    } // chiudo la graffa di if (!$error)
+
+if ($error) {
+
+
+    echo '<p>Image not found</p>';
+
+}
+
+} // chiude l'if principale
+
+?>
+
 </body>
 
 
