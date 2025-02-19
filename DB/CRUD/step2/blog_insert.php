@@ -2,7 +2,7 @@
 
     if (isset($_POST['insert'])) {
 
-        require_once '../includes/connection.php';
+        require_once '../../includes/connection.php';
         $OK = false;
         //creazione databse connection
         $conn = dbConnect('write');
