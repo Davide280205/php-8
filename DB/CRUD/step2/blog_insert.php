@@ -36,9 +36,6 @@
 
 ?>
 
-helo
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
