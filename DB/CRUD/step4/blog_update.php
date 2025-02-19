@@ -1,3 +1,31 @@
+<?php
+
+    require_once '../includes/connection.php';
+    require_once '../includes/utility_funcs.php';
+
+    $OK = false;
+
+    $conn = dbConnect('write');
+
+    if(isset($_GET['article_id']) && !$_POST){
+
+        // prepara una query SQL protetta con un placeholder
+        $sql = 'SELECT article_id, title, article FROM blog WHERE article_id = ?';
+
+        $stmt = $conn->prepare($sql);
+
+        $OK = $stmt->execute([$_GET['article_id']]);
+
+        $stmt->bindColumn(1, $article_id);
+        $stmt->bindColumn(2, $title);
+        $stmt->bindColumn(3, $article);
+
+        $stmt->fetch();
+
+    }
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
