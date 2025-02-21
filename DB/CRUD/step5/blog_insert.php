@@ -1,35 +1,50 @@
 <?php
 
-if(isset($_POST['insert'])) {
+if (isset($_POST['insert'])) {
+
 
     require_once '../includes/connection.php';
+    
     $OK = false;
-
+    // creazione database connection
     $conn = dbConnect('write');
 
-    //creazione query
+
+    // creazione della query
+
+    //
+
     $sql = 'INSERT INTO blog (title, article)
-            VALUES (:title, :article)'; //inserisce nella colonna title e in quella article i valori delle due variabili
+            VALUES(:title, :article)';
 
-    $stmt = $conn->prepare($sql); //prepara una query sql ma non la lancia
 
-    $stmt->bindParam(':title', $_POST['title'], PDO::PARAM_STR);
-    $stmt->bindParam(':article', $_POST['article'], PDO::PARAM_STR);
-
+    $stmt = $conn->prepare($sql);    
+    
+    $stmt->bindParam(':title', $_POST['title'], PDO::PARAM_STR);  
+    $stmt->bindParam(':article', $_POST['article'], PDO::PARAM_STR);   
     $stmt->execute();
-    $OK = $stmt->rowCount();
+    $OK =  $stmt->rowCount();
 
-    if($OK) {
 
-        header('Location: http://localhost/php-8/DB/CRUD/step4/blog_list.php');
+    if ($OK) {
+
+        header('Location: http://localhost/php-8/DB/CRUD/step5/blog_list.php');
         exit;
-    }else {
+
+    } else {
 
         $error = $stmt->errorInfo()[2];
+
     }
+
+
+
 }
 
+
+
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -40,6 +55,7 @@ if(isset($_POST['insert'])) {
 
 <body>
 <h1>Insert New Blog Entry</h1>
+
 <form method="post" action="blog_insert.php">
     <p>
         <label for="title">Title:</label>
@@ -53,5 +69,7 @@ if(isset($_POST['insert'])) {
         <input type="submit" name="insert" value="Insert New Entry">
     </p>
 </form>
+
+
 </body>
 </html>

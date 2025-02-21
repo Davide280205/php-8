@@ -5,6 +5,7 @@ require_once '../includes/utility_funcs.php';
 
 
 $OK = false;
+$done = false;
 
 $conn = dbConnect('write');
 
@@ -27,6 +28,47 @@ if (isset($_GET['article_id']) && !$_POST){
 
 
 }
+
+
+// ======== AGGIUNTA
+
+if (isset($_POST['update'])){
+
+    $sql = 'UPDATE blog SET title = ?, article = ? WHERE article_id = ?';
+    $stmt = $conn->prepare($sql);
+
+    $done = $stmt->execute([$_POST['title'], $_POST['article'], $_POST['article_id']]);
+
+
+
+}
+
+
+if ($done || !isset($_GET['article_id'])) {
+
+    $url = 'http://localhost/php-8/DB/CRUD/step5/blog_list.php';
+
+    if ($done){
+
+        $url .= '?updated=true';
+
+    }
+
+    header("Location: $url");
+    exit;
+
+
+
+}
+
+
+
+
+
+// ======== FINE AGGIUNTA
+
+
+
 
 
 if (isset($stmt)){

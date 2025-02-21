@@ -1,7 +1,7 @@
 <?php
 
-require_once "../includes/connection.php";
-require_once "../includes/utility_funcs.php";
+require_once '../includes/connection.php';
+require_once '../includes/utility_funcs.php';
 
 $conn = dbConnect('read');
 $sql = 'SELECT * FROM blog ORDER BY created DESC';
@@ -10,6 +10,7 @@ $error = $conn->errorInfo()[2];
 
 
 ?>
+
 
 <!DOCTYPE HTML>
 <html>
@@ -25,10 +26,24 @@ $error = $conn->errorInfo()[2];
 
 <?php
 
-if(isset($error)){
+if (isset($error)){
 
     echo "<p>$error</p>";
-}else{
+
+} else {
+
+    // da notare il trucco della graffa NON chiusa!
+
+
+    // === AGGIUNTA
+
+    if (isset($_GET['updated'])){
+
+        echo "<p class='warning'>Record updated</p>";
+
+
+    }
+
 
 ?>
 
@@ -41,22 +56,26 @@ if(isset($error)){
     </tr>
 
 
-    <?php
-
-    while ($row = $result->fetch()) {
-    ?>
-
+    <?php  while ($row = $result->fetch())  {  ?>
     <tr>
-        <td><?= $row['created'] ?></td>
-        <td><?= safe($row['title']) ?></td>
+        <td><?= $row['created']  ?></td>
+        <td><?= safe($row['title'])  ?></td>
         <td><a href="blog_update.php?article_id=<?= $row['article_id'] ?>">EDIT</a></td>
         <td><a href="blog_delete.php?article_id=<?= $row['article_id'] ?>">DELETE</a></td>
     </tr>
 
-    <?php }?>
+    <?php } ?>
+
+
 
 </table>
 
-<?php }?>
+
+
+<?php } ?>
+
+
 </body>
+
+
 </html>
