@@ -29,16 +29,6 @@ if (isset($_GET['article_id']) && !$_POST){
 }
 
 
-if (!isset($_GET['article_id'])){
-
-    $url = 'http://localhost/php-8/DB/CRUD/step4/blog_list.php';
-    header("Location: $url");
-    exit;
-
-
-}
-
-
 if (isset($stmt)){
 
 
