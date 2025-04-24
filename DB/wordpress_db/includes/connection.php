@@ -3,17 +3,17 @@
     function dbConnect($usertype){
 
         $host = 'localhost';
-        $db = 'phpsol';
+        $db = 'wordpress_db';
 
         if ($usertype == 'read'){
 
-            $user = 'psread';
-            $pwd = 'lupo';
+            $user = 'root';
+            $pwd = 'root';
 
     }elseif ($usertype == 'write'){
 
-            $user = 'pswrite';
-            $pwd = 'faina';
+            $user = 'root';
+            $pwd = 'root';
 
     }else{
 
