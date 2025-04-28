@@ -18,3 +18,5 @@ try {
     die("Errore di connessione DB: " . $e->intl_get_error_message());
 
 }
+
+?>
