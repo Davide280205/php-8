@@ -9,12 +9,12 @@ $controller = new StudenteController();
 
 $action = $_GET['action'] ?? 'lista';
 
+$id = $_GET['id'] ?? null;
 
 
+if ($action ==='dettaglio' && $id) {
 
-if ($action ==='nostraAzione') {
-
-	//fai qualcosa
+	$controller->dettaglio($id);
 
 } else{
 
