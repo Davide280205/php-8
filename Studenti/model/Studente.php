@@ -27,7 +27,25 @@ class Studente {
 
 	}
 
+	public function trovaPerId($id) {
 
+		// query con parametro
+
+		$sql = "SELECT * FROM studenti WHERE id = ?";
+
+		// preparo la query
+
+		$query = $this->pdo->prepare($sql);
+
+		// eseguo la query con il valore di id
+
+		$query->execute([$id]);
+
+		// ritorno il risultato (uno solo!)
+
+		return $query->fetch();
+
+	}
 
 }
 

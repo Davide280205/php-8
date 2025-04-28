@@ -34,7 +34,15 @@ class StudenteController {
 	}
 
 
+	public function dettaglio($id) {
 
+		// recupero i dati dello studente dal modello
+
+		$studente = $this->studenteModel->trovaPerId($id);
+
+		require __DIR__ . '/../view/dettaglio_studente.php';
+
+	}
 
 
 }
