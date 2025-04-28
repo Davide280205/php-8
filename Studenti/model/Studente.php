@@ -16,3 +16,15 @@
         }
 
     }
+
+    // Restituisce tutti gli studenti
+
+    public function tutti(){
+
+        $sql = 'SELECT id, nome, cognome FROM studenti';    // SQL per prendere i dati
+        $risultato = $this->pdo->query($sql);   // esegue la query
+        return $risultato->fetchAll();  // ritorna tutti i risultati        
+
+    }
+
+?>
