@@ -1,5 +1,0 @@
-MVC -> Model View Controller
-
-Model (Dati)
-View (Interfaccia)
-Controller (Logica)
