@@ -1,19 +1,23 @@
 <?php
 
-    require_once __DIR__ . '/controller/StudenteController.php';
 
-    $controller = new StudenteController();
+require_once __DIR__ . '/controller/StudenteController.php';
 
-    $action = $_GET['action'] ?? 'lista';
+$controller = new StudenteController();
 
-    if ($action === 'nostraAzione') {
 
-        // fai qualcosa
 
-    }else{
+$action = $_GET['action'] ?? 'lista';
 
-        $ontroller->lista();
 
-    }
 
-?>
+
+if ($action ==='nostraAzione') {
+
+	//fai qualcosa
+
+} else{
+
+	$controller->lista();
+
+}
