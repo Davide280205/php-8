@@ -129,3 +129,5 @@ if ($action === 'dettaglio' && $id) {
 }
 
 ```
+
+e quindi chiamiamo la funzione dettaglio($id) che si trova sul mio controller
