@@ -104,7 +104,7 @@ require_once __DIR__ . '/controller/StudenteController.php';
 
 index.php deve capire se caricare la lista di tutti gli elementi o solo il dettaglio del singolo stuente.
 
-All'avvio dell'applicazione il browser carica semplicemente la lista con tutti gli studenti. Questo perché npn gli viene passato
+All'avvio dell'applicazione il browser carica semplicemente la lista con tutti gli studenti. Questo perché non gli viene passato
 via get nessun parametro, quindi viene attivato solo:
 
 ```php
