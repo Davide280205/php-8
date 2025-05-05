@@ -1,5 +1,5 @@
 MVC -> Model View Controller
 
-Model (Dati) -> è quello che si occupa di interagire con il databse, conteien tutte le regole per manipolare i dati (es: insert, update, delete...).
-View (Interfaccia) -> è la parte che l'utente vede (interfaccia grafica), è un'interaccia che può raccogliere tramite input i dati dell'utente.
-Controller (Regole Operative) -> è quello che coordina il flusso dei dati tra model e view, è dove c'è scritta la logica dell'opearzione fatta dall'utente.
+Model (Dati) -> è quello che si occupa di interagire con il database, contiene tutte le regole per manipolare i dati (es: insert, update, delete…).
+View (Interfaccia) -> è la parte che l'utente vede (interfaccia grafica), è un'interfaccia che può raccogliere tramite input i dati dell'utente.
+Controller (Regole Operative) -> è quello che coordina il flusso dei dati tra model e view, è dove c'è scritta la logica dell'operazione fatta dall'utente.
