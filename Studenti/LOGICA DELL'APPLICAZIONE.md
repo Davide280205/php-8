@@ -35,4 +35,20 @@ require_once __DIR__ . '/../model/Studente.php';
 
 Anche qui dobbiamo creare una classe: StudenteController con due metodi proncipali:
 
-- function lista()
+- function lista() che richiama -> tutti()
+- function dettaglio ($id) che richiama -> trovaPerId($id)
+
+E' importante notare che la classe StudenteController deve creare una nuova
+istanza della classe Studente che si trova nel file incluso Studente.php.
+Ecco perché inserisco questo codice:
+
+```php
+
+public function__contruct(){
+
+    // crea l'oggetto Studente
+    $this->studenteModel = new Studente();
+
+};
+
+```
