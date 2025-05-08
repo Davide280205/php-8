@@ -16,6 +16,14 @@ if ($action ==='dettaglio' && $id) {
 
 	$controller->dettaglio($id);
 
+} elseif($action==='loadForm'){
+
+	$controller->loadForm()
+
+} elseif($action==='store'){
+
+	$controller->store()
+
 } else{
 
 	$controller->lista();

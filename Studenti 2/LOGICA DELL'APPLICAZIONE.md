@@ -9,6 +9,9 @@ appena sotto il titolo 'Studenti'.
 
 2 - Controller: il controller deve dirigere tutto. Creiamo un nuovo metodo che si chiama loadForm() che carica semplicemente la view.
 
+Il controller deve anche recuperare le variabili che gli vengono inviate via POST dal form ed inviarle al modello.
+Fa il suo lavoro di ponte tra la view e il model.
+
 3 - Modello: prende i dati che gli vengono inviati dal controller e li inserisce nel DB. Fa la query al DB.
 
 4 - Index: deve intercettare l'azione del form e chiamare il controller

@@ -44,5 +44,22 @@ class StudenteController {
 
 	}
 
+	public function loadForm(){
+
+		require __DIR__ . "/../view/aggiungi_studente.php";
+	
+	}
+
+	public function store(){
+
+		if (isset($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'])){
+
+			$this->studenteModel->nuovo($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'])
+
+		}
+
+		header("Location: index.php");
+
+	}
 
 }
