@@ -56,6 +56,6 @@ class Studente {
 		return $sql->execute([$nome, $cognome, $email, $telefono]);
 
 	}
-
+	
 }
 
