@@ -8,8 +8,8 @@ $controller = new StudenteController();
 
 
 $action = $_GET['action'] ?? 'lista';
-
 $id = $_GET['id'] ?? null;
+
 
 
 if ($action ==='dettaglio' && $id) {
@@ -18,11 +18,11 @@ if ($action ==='dettaglio' && $id) {
 
 } elseif($action==='loadForm'){
 
-	$controller->loadForm()
+	$controller->loadForm();
 
 } elseif($action==='store'){
 
-	$controller->store()
+	$controller->store();
 
 } else{
 

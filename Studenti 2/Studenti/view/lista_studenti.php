@@ -11,7 +11,7 @@
 
 <h1>Studenti</h1>
 
-<p><a href="index.php?action=loadForm">Aggiungi nuovo studente</a></p>
+<p><a href="index.php?action=loadForm">Aggiungi un nuovo studente</a></p>
 
 <table class="striped">
     <thead>

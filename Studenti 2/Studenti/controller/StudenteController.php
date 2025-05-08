@@ -29,26 +29,22 @@ class StudenteController {
 		require __DIR__ . '/../view/lista_studenti.php';
 
 
-
-
 	}
 
 
-	public function dettaglio($id) {
-
-		// recupero i dati dello studente dal modello
+	public function dettaglio($id){
 
 		$studente = $this->studenteModel->trovaPerId($id);
 
 		require __DIR__ . '/../view/dettaglio_studente.php';
-
 	}
+
 
 	public function loadForm(){
 
 		require __DIR__ . "/../view/aggiungi_studente.php";
-	
 	}
+
 
 	public function store(){
 
@@ -60,6 +56,11 @@ class StudenteController {
 
 		header("Location: index.php");
 
+
 	}
+
+
+
+
 
 }

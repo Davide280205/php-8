@@ -14,7 +14,7 @@
         <p><strong>Cognome:</strong> <?= htmlspecialchars($studente['cognome']) ?></p>
         <p><strong>Email:</strong> <?= htmlspecialchars($studente['email']) ?></p>
         <p><strong>Telefono:</strong> <?= htmlspecialchars($studente['telefono']) ?></p>
-        <p><strong>Età:</strong> <?= htmlspecialchars($studente['età']) ?></p>
+        <p><strong>Eta:</strong> <?= htmlspecialchars($studente['Eta']) ?></p>
     <?php else: ?>
         <p>Studente non trovato.</p>
     <?php endif; ?>
