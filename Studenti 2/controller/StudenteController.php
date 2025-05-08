@@ -54,7 +54,7 @@ class StudenteController {
 
 		if (isset($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'])){
 
-			$this->studenteModel->nuovo($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'])
+			$this->studenteModel->nuovo($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono']);
 
 		}
 
