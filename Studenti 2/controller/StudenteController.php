@@ -29,32 +29,39 @@ class StudenteController {
 		require __DIR__ . '/../view/lista_studenti.php';
 
 
+
+
 	}
+
 
 
 	public function dettaglio($id){
 
+		//recupero i dettagli dello studente dal modello
 		$studente = $this->studenteModel->trovaPerId($id);
 
+
 		require __DIR__ . '/../view/dettaglio_studente.php';
+
 	}
 
 
 	public function loadForm(){
 
 		require __DIR__ . "/../view/aggiungi_studente.php";
+
 	}
 
 
 	public function store(){
 
-		if (isset($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'])){
 
-			$this->studenteModel->nuovo($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono']);
+			if (isset($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono'] )){
 
-		}
+				$this->studenteModel->nuovo($_POST['nome'], $_POST['cognome'], $_POST['email'], $_POST['telefono']);
+			}
 
-		header("Location: index.php");
+			header("Location: index.php");
 
 
 	}

@@ -1,6 +1,7 @@
 <?php
 
 
+
 require_once __DIR__ . '/controller/StudenteController.php';
 
 $controller = new StudenteController();
@@ -20,11 +21,11 @@ if ($action ==='dettaglio' && $id) {
 
 	$controller->loadForm();
 
-} elseif($action==='store'){
+}elseif($action==='store'){
 
 	$controller->store();
 
-} else{
+}else{
 
 	$controller->lista();
 

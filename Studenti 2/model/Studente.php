@@ -30,22 +30,27 @@ class Studente {
 
 	public function trovaPerId($id){
 
-		$sql = "SELECT * FROM studenti WHERE id = ?";	
-
+		// query con parametro
+		$sql = "SELECT * FROM studenti WHERE id = ?";
+		// preparo la query
 		$query = $this->pdo->prepare($sql);
 
+		// eseguo la query con il valore di id
 		$query->execute([$id]);
 
+		//ritorno il risultato (uno solo!)
 		return $query->fetch();
+
 	}
 
 
-	// aggiunge un nuovo studente 
+	// aggiunge un nuovo studente
 	public function nuovo($nome, $cognome, $email, $telefono){
 
 		$sql = $this->pdo->prepare("INSERT INTO studenti (nome, cognome, email, telefono) VALUES (?, ?, ?, ?)");
 
 		return $sql->execute([$nome, $cognome, $email, $telefono]);
+
 
 	}
 
