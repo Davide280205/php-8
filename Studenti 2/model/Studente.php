@@ -47,5 +47,15 @@ class Studente {
 
 	}
 
+	//aggiungere un nuovo studente
+
+	public function nuovo($nome, $cognome, $email, $telefono) {
+
+		$sql = $this->pdo->prepare("INSERT INTO studenti (nome, cognome, email, telefono) VALUES (?, ?, ?, ?)");
+
+		return $sql->execute([$nome, $cognome, $email, $telefono]);
+
+	}
+
 }
 
