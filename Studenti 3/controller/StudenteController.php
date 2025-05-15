@@ -85,6 +85,13 @@ class StudenteController {
 
 		}
 
+		else {
+
+			$studente = $this->studenteModel->trovaPerId($id);
+			require __DIR__ . '/../view/modifica_studente.php';
+
+		}
+
 	}
 
 
