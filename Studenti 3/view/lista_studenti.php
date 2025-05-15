@@ -26,7 +26,7 @@
     <tr>
         <td><?= htmlspecialchars($studente['nome']) ?></td>
         <td><?= htmlspecialchars($studente['cognome']) ?></td>
-        <td><a href="index.php?action=dettaglio&id=<?= $studente['id'] ?>">Dettagli</a></td>
+        <td><a href="index.php?action=dettaglio&id=<?= $studente['id'] ?>">Dettagli</a> <a href="index.php?action=modifica&id=<?= $studente['id'] ?>"> Modifica </a></td>
     </tr>
     <?php endforeach; ?>
     

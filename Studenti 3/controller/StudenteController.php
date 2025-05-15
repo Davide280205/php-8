@@ -66,6 +66,27 @@ class StudenteController {
 
 	}
 
+	public function modifica($id){
+
+		if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+			$dati = [
+
+				'nome' => $_POST['nome'],
+				'cognome' => $_POST['cognome'],
+				'email' => $_POST['email'],
+				'telefono' => $_POST['telefono']
+
+			];
+
+			$this->studenteModel->aggiorna($id, $dati);
+			header("Location: index.php");
+			exit;
+
+		}
+
+	}
+
 
 
 

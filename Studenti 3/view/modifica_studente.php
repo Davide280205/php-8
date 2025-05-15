@@ -10,27 +10,27 @@
 
 
 
-    <h1>Aggiungi Studente</h1>
+    <h1>Modifica Studente</h1>
 
    <form action="index.php?action=store" method="POST">
         <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
+            <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($studente['nome']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="cognome">Cognome:</label>
-            <input type="text" name="cognome" id="cognome" required>
+            <input type="text" name="cognome" id="cognome" value="<?= htmlspecialchars($studente['cognome']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" required>
+            <input type="text" name="email" id="email" value="<?= htmlspecialchars($studente['email']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="telefono">Telefono:</label>
-            <input type="text" name="telefono" id="telefono" required>
+            <input type="text" name="telefono" id="telefono" value="<?= htmlspecialchars($studente['telefono']) ?>" required>
         </div>
         
         <div class="form-actions">
