@@ -12,30 +12,27 @@
 
     <h1>Modifica Studente</h1>
 
+<!-- <form action ="index.php?action=modifica&id=<?= $studente['id'] ?>" -->
+
    <form method="POST">
         <div class="form-group">
-           <label for="nome">Nome:</label> 
-            <input type="text" name="nome" id="nome" value='<?= htmlspecialchars($studente['nome'])?>' required><!-- htmlspecialchars se ci sono caratteri specili li traduce in entita html non dannose-->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($studente['nome']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="cognome">Cognome:</label>
-            <input type="text" name="cognome" id="cognome" value='<?= htmlspecialchars($studente['cognome'])?>' required>
+            <input type="text" name="cognome" id="cognome" value="<?= htmlspecialchars($studente['cognome']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value='<?= htmlspecialchars($studente['email'])?>' required>
+            <input type="text" name="email" id="email" value="<?= htmlspecialchars($studente['email']) ?>" required>
         </div>
         
         <div class="form-group">
             <label for="telefono">Telefono:</label>
-            <input type="text" name="telefono" id="telefono" value='<?= htmlspecialchars($studente['telefono'])?>' required>
-        </div>
-
-        <div class="form-group">
-            <label for="eta">Eta:</label>
-            <input type="text" name="eta" id="eta" value='<?= htmlspecialchars($studente['eta'])?>' required>
+            <input type="text" name="telefono" id="telefono" value="<?= htmlspecialchars($studente['telefono']) ?>" required>
         </div>
         
         <div class="form-actions">

@@ -1,6 +1,5 @@
 # Studenti
-                                                Dati   interfaccia regole
-                                                (Model View        Controller)
+
 Realizzare una mini applicazione PHP con pattern MVC per:
 
 - Visualizzare un elenco di studenti (nome, cognome).

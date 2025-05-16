@@ -32,11 +32,6 @@
             <label for="telefono">Telefono:</label>
             <input type="text" name="telefono" id="telefono" required>
         </div>
-
-        <div class="form-group">
-            <label for="eta">Eta:</label>
-            <input type="text" name="eta" id="eta" required>
-        </div>
         
         <div class="form-actions">
             
