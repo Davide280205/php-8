@@ -11,7 +11,7 @@
 
 <h1>Studenti</h1>
 
-<p><a href="index.php?action=loadForm">Aggiungi un nuovo studente</a></p>
+<p><a href="index.php?action=loadForm">aggiungi un nuovo studente</a></p>
 
 <table class="striped">
     <thead>
@@ -26,7 +26,9 @@
     <tr>
         <td><?= htmlspecialchars($studente['nome']) ?></td>
         <td><?= htmlspecialchars($studente['cognome']) ?></td>
-        <td><a href="index.php?action=dettaglio&id=<?= $studente['id'] ?>">Dettagli</a> <a href="index.php?action=modifica&id=<?= $studente['id'] ?>"> Modifica </a></td>
+        <td><a href="index.php?action=dettaglio&id=<?= $studente['id'] ?>">Dettagli</a> |  
+            <a href="index.php?action=modifica&id=<?= $studente['id'] ?>">Modifica</a> |
+            <a href="index.php?action=elimina&id=<?= $studente['id'] ?>" onclick="return confirm('Sei sicuro di voler eliminare questo studente')">Elimina</a></td>
     </tr>
     <?php endforeach; ?>
     

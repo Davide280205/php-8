@@ -1,60 +1,72 @@
-<?php
+<?php 
+// studente e con la prima lettera maiuscola perche tutto una classe
+//model
 
-// Model: si occupa di interagire con il DB
 
-// collego il file che crea la connessione al db
 require_once __DIR__ . '/../config/db.php';
 
-
-class Studente {
-
-// Costruttore: quando creo un oggetto Studente salvo la connessione PDO
+class Studente{
+	//Costruttore, quando creo l'oggetto studente salvo la connessione pdo
 	public function __construct(){
-
-		global $pdo;		// prendo la variabile $pdo definita in db.php
-		$this->pdo = $pdo;	// La salvo dentro la mia classe
-
-
+		global $pdo; //prendo variabile
+		$this->pdo = $pdo; //salvo variabile
 	}
-
-
-// Restituisce tutti gli studenti
+	//Returna tutti gli studenti
 	public function tutti(){
-
-		$sql = 'SELECT id, nome, cognome FROM studenti'; // SQL per prendere dati
-		$risultato = $this->pdo->query($sql); // esegue la query
-		return $risultato->fetchAll(); // Ritorna tutti i risultati
-
+		$sql = 'SELECT id, nome, cognome FROM studenti'; //sql per prendere i dati
+		$risultato = $this->pdo->query($sql); // eseque query
+		return $risultato->fetchALL(); // returna i dati
 	}
-
-
 	public function trovaPerId($id){
-
-		// query con parametro
 		$sql = "SELECT * FROM studenti WHERE id = ?";
-		// preparo la query
 		$query = $this->pdo->prepare($sql);
-
-		// eseguo la query con il valore di id
 		$query->execute([$id]);
-
-		//ritorno il risultato (uno solo!)
 		return $query->fetch();
 
 	}
 
+	public function nuovo($nome, $cognome, $email, $telefono, $eta){
 
-	// aggiunge un nuovo studente
-	public function nuovo($nome, $cognome, $email, $telefono){
+		$sql = $this->pdo->prepare("INSERT INTO studenti (nome, cognome, email, telefono, eta) VALUES (?,?,?,?,?)");
 
-		$sql = $this->pdo->prepare("INSERT INTO studenti (nome, cognome, email, telefono) VALUES (?, ?, ?, ?)");
-
-		return $sql->execute([$nome, $cognome, $email, $telefono]);
-
+		return $sql->execute([$nome, $cognome, $email, $telefono, $eta]);
 
 	}
 
+	//aggiornare scheda studente
 
+	public function aggiorna($id, $dati){
+
+		$sql = "UPDATE studenti SET nome = ?, cognome = ?, email = ?, telefono = ?, eta = ? WHERE id =  ?";
+
+		$query = $this->pdo->prepare($sql);
+
+		$query->execute([
+
+			$dati['nome'],
+			$dati['cognome'],
+			$dati['email'],
+			$dati['telefono'],
+			$dati['eta'],
+			$id
+
+		]);
+
+	}
+
+	//elimina uno studente
+
+	public function cancellaId($id){
+
+		$sql = "DELETE FROM studenti WHERE id = ?";
+
+		$query = $this->pdo->prepare($sql);
+
+		$query->execute([$id]);
+
+	}
 
 }
 
+
+ ?>
