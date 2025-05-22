@@ -26,6 +26,7 @@
         <td><?= htmlspecialchars($book['id']) ?></td>
         <td><?= htmlspecialchars($book['titolo']) ?></td>
         <td><?= htmlspecialchars($book['autore']) ?></td>
+        <td><?= htmlspecialchars($book['anno']) ?></td>
         <td><?= htmlspecialchars($book['stato']) ?></td>
         <td><a href="index.php?action=dettaglio&id=<?= $book['id'] ?>">Dettagli dei libri</a> | <a href="index.php?action=elimina&id=<?= $book['id'] ?>" onclick="return confirm('Sei sicuro di voler eliminare questo libro?')">Elimina</a></td>
     </tr>
