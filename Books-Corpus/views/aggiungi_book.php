@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aggiungi Studente</title>
+    <title>Aggiungi Libro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
 </head>
 <body>
@@ -43,7 +43,7 @@
         </div>
     </form>
     
-    <p><a href="index.php">Torna alla lista</a></p>
+    <p><a href="index.php">Torna alla lista dei libri</a></p>
 
 </main>
 </body>

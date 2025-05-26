@@ -38,9 +38,9 @@ class BookController {
     public function store(){
 
 
-		if (isset($_POST['id'], $_POST['titolo'], $_POST['autore'], $_POST['anno'], $_POST['stato'])){
+		if (isset($_POST['titolo'], $_POST['autore'], $_POST['anno'], $_POST['stato'])){
 
-			$this->studenteModel->nuovo($_POST['id'], $_POST['titolo'], $_POST['autore'], $_POST['anno'], $_POST['stato']);
+			$this->bookModel->nuovo($_POST['titolo'], $_POST['autore'], $_POST['anno'], $_POST['stato']);
 		}
 
 	    header("Location: index.php");

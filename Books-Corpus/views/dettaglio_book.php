@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dettaglio Books</title>
+    <title>Dettaglio libri</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
 </head>
 <body>
     
 <main class="container">
     
-    <h1>Dettaglio Book</h1>
+    <h1>Dettaglio libro</h1>
     <?php if ($book): ?>
         <p><strong>Id:</strong> <?= htmlspecialchars($book['id']) ?></p>
         <p><strong>Titolo:</strong> <?= htmlspecialchars($book['titolo']) ?></p>
