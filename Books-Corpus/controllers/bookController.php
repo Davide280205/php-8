@@ -29,6 +29,12 @@ class BookController {
 
 	}
 
+		public function loadForm(){
+
+		require __DIR__ . "/../views/aggiungi_book.php";
+
+	}
+
     public function store(){
 
 

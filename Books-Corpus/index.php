@@ -12,7 +12,15 @@ if ($action ==='dettaglio' && $id) {
 
 	$controller->dettaglio($id);
 
-} elseif($action==='elimina'){
+}elseif($action==='loadForm'){
+
+	$controller->loadForm();
+
+}elseif($action==='store'){
+
+	$controller->store();
+
+}elseif($action==='elimina'){
 
 	$controller->elimina($id);
 

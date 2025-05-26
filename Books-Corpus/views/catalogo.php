@@ -10,6 +10,8 @@
 
 <h1>Libri</h1>
 
+<p><a href="index.php?action=loadForm">Aggiungi un nuovo libro</a></p>
+
 <table class="striped">
     <thead>
         <tr>

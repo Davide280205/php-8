@@ -31,7 +31,37 @@ class Book {
 
 	}
 
-    public function cancellaId($id){
+		public function nuovo($titolo, $autore, $anno, $stato){
+
+		$sql = $this->pdo->prepare("INSERT INTO books (titolo, autore, anno, stato) VALUES (?, ?, ?, ?)");
+
+		return $sql->execute([$titolo, $autore, $anno, $stato]);
+
+
+	}
+
+		public function aggiorna($id, $dati){
+
+
+		$sql = "UPDATE books SET titolo = ?, autore = ?, anno = ?, stato = ? WHERE id = ?";
+
+		$query = $this->pdo->prepare($sql);
+
+		$query->execute([
+
+			$dati['titolo'],
+			$dati['autore'],
+			$dati['anno'],
+			$dati['stato'],
+			$id
+
+
+		]);
+
+
+	}
+
+	public function cancellaId($id){
 
 		$sql = "DELETE FROM books WHERE id = ?";
 
