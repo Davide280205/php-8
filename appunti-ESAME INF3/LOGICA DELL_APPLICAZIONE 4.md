@@ -1,6 +1,5 @@
 ## LOGICA DELL'APPLICAZIONE 'Studenti' - Parte 4
 
-
 ## Elimina studente
 
 Dare la possibilità all'utente di eliminare la scheda di uno studente.
@@ -13,24 +12,16 @@ Dare la possibilità all'utente di eliminare la scheda di uno studente.
 
 3 - Modello: c'è una funzione (cancella) che si collega al db e usa DELETE per cancellare un id particolare.
 
- 
-
-
 Controller:
 
-
 ```php
-
 public function elimina($id) {
 
 $this->studenteModel->cancellaId($id);
 header("Location: index.php");
 
 }
-
 ```
-
-
 
 Model:
 
@@ -39,8 +30,6 @@ public function cancellaId($id) {
         $sql = "DELETE FROM studenti WHERE id = ?";          
         $query = $this->pdo->prepare($sql);                     
         $query->execute([$id]);                                 
-                                      
+
     }
-
-
 ```

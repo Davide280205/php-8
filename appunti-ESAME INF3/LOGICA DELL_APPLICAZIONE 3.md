@@ -1,6 +1,5 @@
 ## LOGICA DELL'APPLICAZIONE 'Studenti' - Parte 3
 
-
 ## Modifica studente
 
 Dare la possibilità all'utente di modificare la scheda di uno studente.
@@ -13,31 +12,23 @@ Dare la possibilità all'utente di modificare la scheda di uno studente.
 
 3 - Modello: prende i dati che gli vengono inviati dal controller via post e li inserisce nel db tramite la funzione 'aggiorna'.
 
- 
+### Sviluppo
 
- ### Sviluppo
- 
  Per la vista, un esempio di campo:
 
- ```html
-
+```html
 <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($studente['nome']) ?>" required>
+           <label for="nome">Nome:</label>
+           <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($studente['nome']) ?>" required>
 </div>
-
-
-
 ```
-
 
 Controller:
 
 ```php
-
 public function modifica($id) {
-    
-    
+
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dati = [
             'nome' => $_POST['nome'],
@@ -57,17 +48,11 @@ public function modifica($id) {
         require __DIR__ . '/../view/modifica_studente.php';
     }
 }
-
-
-
 ```
-
-
 
 Model: 
 
 ```php
-
     public function aggiorna($id, $dati) {
     $sql = "UPDATE studenti SET nome = ?, cognome = ?, email = ?, telefono = ? WHERE id = ?";
     $query = $this->pdo->prepare($sql);
@@ -79,8 +64,4 @@ Model:
         $id
     ]);
 }
-
-
-
-
 ```

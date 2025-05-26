@@ -1,10 +1,8 @@
 ## LOGICA DELL'APPLICAZIONE 'Studenti' - Parte 2
 
-
 ## Aggiungi uno studente
 
 Dare la possibilità all'utente di aggiungere un nuovo studente alla lista studenti.
-
 
 1 - Vista: ci vuole un nuovo form, quindi una view che chiamiamo aggiungi_studente.php. Si accede alla view cliccando un link dalla pagina della lista, appena sotto il titolo principale 'Studenti';
 
@@ -15,14 +13,12 @@ IMPORTANTE: Il controller deve anche recuperare le variabili che gli vengono inv
 
 4 - Index: in qualche modo index deve intercettare l'azione del form e chiamare il controller. Miglioramenti: il codice nel router ha troppi elseif; vedere come renderlo più semplice da leggere.
 
-
 ### Sviluppo
 
 Nella lista, si sarebbe tentati di inserire un link diretto alla nuova view, del tipo:
 
-``` html
+```html
 <p><a href="aggiungi_studente.php">Aggiungi un nuovo studente</a></p>
-
 ```
 
 ma questo non funzionerebbe.
@@ -30,9 +26,5 @@ ma questo non funzionerebbe.
 Bisogna passare dal router, e per questo dobbiamo caricare la view con il form:
 
 ```html
-
 <p><a href="index.php?action=loadForm">Aggiungi un nuovo studente</a></p>
-
 ```
-
-
