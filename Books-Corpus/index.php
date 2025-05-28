@@ -24,6 +24,14 @@ if ($action ==='dettaglio' && $id) {
 
 	$controller->elimina($id);
 
+}elseif($action==='libriLetti'){
+
+	$controller->libriLetti($id);
+
+}elseif($action==='libriNonLetti'){
+
+	$controller->libriNonLetti($id);
+
 }else{
 
 	$controller->lista();

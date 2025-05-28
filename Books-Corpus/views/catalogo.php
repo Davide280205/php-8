@@ -3,14 +3,28 @@
 <head>
     <title>Lista Libri</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
+<style>
+    menu a p{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+</style>
 </head>
 <body>
 
-<main class="container">   
+<main class="container">
 
 <h1>Libri</h1>
 
-<p><a href="index.php?action=loadForm">Aggiungi un nuovo libro</a></p>
+<div class="menu">
+
+    <p><a href="index.php?action=loadForm">Aggiungi un nuovo libro</a></p>
+    <p><a href="index.php?action=libriLetti">Filtra i libri letti</a></p>
+    <p><a href="index.php?action=libriNonLetti">Filtra i libri non letti</a></p>
+    <p><a href="index.php">Torna alla lista dei libri</a></p>
+
+</div>
 
 <table class="striped">
     <thead>

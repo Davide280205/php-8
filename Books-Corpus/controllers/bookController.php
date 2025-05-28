@@ -35,6 +35,22 @@ class BookController {
 
 	}
 
+    public function libriLetti() {
+
+		$books = $this->bookModel->libriLetti();
+
+		require __DIR__ . '/../views/catalogo.php';
+
+	}
+
+	public function libriNonLetti() {
+
+		$books = $this->bookModel->libriNonLetti();
+
+		require __DIR__ . '/../views/catalogo.php';
+
+	}
+
     public function store(){
 
 
