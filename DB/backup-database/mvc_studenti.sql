@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Creato il: Mag 05, 2025 alle 07:25
--- Versione del server: 5.7.24
--- Versione PHP: 8.3.1
+-- Host: 127.0.0.1
+-- Creato il: Mag 28, 2025 alle 10:58
+-- Versione del server: 10.4.32-MariaDB
+-- Versione PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `studenti` (
   `cognome` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `telefono` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dump dei dati per la tabella `studenti`
@@ -41,7 +41,8 @@ CREATE TABLE `studenti` (
 
 INSERT INTO `studenti` (`id`, `nome`, `cognome`, `email`, `telefono`) VALUES
 (1, 'Mario', 'Rossi', 'mario.rossi@email.com', '1234567890'),
-(2, 'Luca', 'Bianchi', 'luca.bianchi@email.com', '0987654321');
+(2, 'Luca', 'Bianchi', 'luca.bianchi@email.com', '0987654321'),
+(3, 'Davide', 'Corpus', 'corpus.davide@gmail.com', '3713841121');
 
 --
 -- Indici per le tabelle scaricate
@@ -61,7 +62,7 @@ ALTER TABLE `studenti`
 -- AUTO_INCREMENT per la tabella `studenti`
 --
 ALTER TABLE `studenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
