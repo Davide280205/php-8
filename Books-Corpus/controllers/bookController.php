@@ -35,7 +35,9 @@ class BookController {
 
 	}
 
-    public function libriLetti() {
+
+
+	public function libriLetti() {
 
 		$books = $this->bookModel->libriLetti();
 
