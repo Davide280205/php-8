@@ -4,11 +4,20 @@
     <title>Lista Libri</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
 <style>
-    menu a p{
+    .menu{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
+        border: 3px solid #01aaff;
+        padding: 2%;
+        border-radius: 20px;
+        margin-block: 30px;
     }
+
+    .menu p{
+        margin: 0;
+    }
+
 </style>
 </head>
 <body>
