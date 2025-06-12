@@ -31,6 +31,12 @@ class OperaController {
 
     }
 
+    public function destItalia() {
+        
+        $opere = $this->operaModel->destItalia();
+        
+        require __DIR__ . '/../view/lista_opere.php';
+    }
 
 
  public function loadForm() {

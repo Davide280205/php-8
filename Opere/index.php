@@ -36,6 +36,11 @@ elseif ($action === 'elimina') {
     $controller->elimina($id);
 }
 
+elseif ($action === 'destItalia') {
+    $controller->destItalia($id);
+
+}
+
 
 
 // in tutti gli altri casi mostra l'elenco delle opere.

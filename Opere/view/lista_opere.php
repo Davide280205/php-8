@@ -14,6 +14,9 @@
 
 <p><a href="index.php?action=loadForm">Aggiungi una nuova opera</a></p>
 
+<p><a href="index.php?action=destItalia">Mostra le opere dell'Italia</a></p>
+
+
 <table class="striped">
     <thead>
         <tr>
