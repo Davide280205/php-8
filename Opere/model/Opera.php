@@ -29,6 +29,12 @@ class Opera {
         return $query->fetch();                                 
     }
 
+    public function Italia() {
+        $sql = 'SELECT * FROM id, titolo, anno, stato, paese FROM opere WHERE paese = "Italia"';     
+        $risultato = $this->pdo->query($sql);              
+        return $risultato->fetchAll();                               
+    }
+
 
     
 
