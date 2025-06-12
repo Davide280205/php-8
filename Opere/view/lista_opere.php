@@ -40,8 +40,6 @@
     
 </table>
 
-<p><a href="index.php">Torna alla lista delle opere</a></p>
-
 </main>
 
 </body>
