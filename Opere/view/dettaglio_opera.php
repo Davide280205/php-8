@@ -11,12 +11,12 @@
 
     <h1>Dettaglio Opera</h1>
 
-    <?php  ?>
+    <?php if($opera): ?>
 
-        <p><strong>Titolo:</strong> <?=  ?></p>
-        <p><strong>Anno di produzione:</strong> <?=  ?></p>
-        <p><strong>Stato di conservazione:</strong> <?=  ?></p>
-        <p><strong>Paese di destinazione:</strong> <?=  ?></p>
+        <p><strong>Titolo:</strong> <?= htmlspecialchars($opera['Id']) ?></p>
+        <p><strong>Anno di produzione:</strong> <?= htmlspecialchars($opera['anno']) ?></p>
+        <p><strong>Stato di conservazione:</strong> <?= htmlspecialchars($opera['stato']) ?></p>
+        <p><strong>Paese di destinazione:</strong> <?= htmlspecialchars($opera['paese']) ?></p>
 
     
 

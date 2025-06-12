@@ -10,7 +10,7 @@ $id = $_GET['id'] ?? null;
 // mostra dettaglio opera
 if ($action === 'dettaglio' && $id) {
     
-
+    $controller->dettaglio($id);
 
 } 
 

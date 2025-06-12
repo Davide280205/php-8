@@ -23,8 +23,9 @@ class OperaController {
     
     public function dettaglio($id) {
         
+        $opera = $this->operaModel->trovaPerId($id);
 
-
+        require __DIR__ . '/../view/dettaglio_opera.php';
 
 
 

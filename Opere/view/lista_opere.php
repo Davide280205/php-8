@@ -23,16 +23,17 @@
         </tr>
     </thead>
 
-    <?php  ?>
+    <?php  foreach ($opere as $opera):?>
 
     <tr>
-        <td><?=  ?></td>
-        <td><?=  ?></td>
-        <td><a href=" ">Dettagli</a> | <a href="index.php?action=modifica&id=<?= $opera['id'] ?>">Modifica</a> | <a href="index.php?action=elimina&id=<?= $opera['id'] ?>" onclick="return confirm('Sei sicuro di voler eliminare questa opera?')">Elimina</a></td>
+        <td><?= htmlspecialchars($opera['id'])?></td>
+        <td><?= htmlspecialchars($opera['titolo'])?></td>
+        <td><?= htmlspecialchars($opera['paese'])?></td>
+        <td><a href="index.php?action=dettaglio&id=<?= $opera['id'] ?>">Dettagli</a> | <a href="index.php?action=modifica&id=<?= $opera['id'] ?>">Modifica</a> | <a href="index.php?action=elimina&id=<?= $opera['id'] ?>" onclick="return confirm('Sei sicuro di voler eliminare questa opera?')">Elimina</a></td>
     </tr>
 
 
-    <?php  ?>
+    <?php endforeach; ?>
     
 </table>
 
