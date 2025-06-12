@@ -16,8 +16,6 @@
 
 <p><a href="index.php?action=destItalia">Mostra le opere che vanno in Italia</a></p>
 
-<p><a href="index.php">Torna alla lista delle opere</a></p>
-
 
 
 <table class="striped">
@@ -41,6 +39,8 @@
     <?php endforeach; ?>
     
 </table>
+
+<p><a href="index.php">Torna alla lista delle opere</a></p>
 
 </main>
 
