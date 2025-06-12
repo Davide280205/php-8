@@ -37,6 +37,8 @@
     
 </table>
 
+<p><a href="index.php">Mostra le opere dell'Italia</a></p>
+
 </main>
 
 </body>

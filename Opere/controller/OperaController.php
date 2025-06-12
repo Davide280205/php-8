@@ -35,7 +35,7 @@ class OperaController {
         
         $opere = $this->operaModel->Italia();
         
-        require __DIR__ . '/../view/lista_opere.php';
+        require __DIR__ . '/../view/lista_opere_italia.php';
     }
 
 
