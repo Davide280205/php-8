@@ -33,7 +33,7 @@ class OperaController {
 
     public function destItalia() {
         
-        $opere = $this->operaModel->destItalia();
+        $opere = $this->operaModel->Italia();
         
         require __DIR__ . '/../view/lista_opere.php';
     }

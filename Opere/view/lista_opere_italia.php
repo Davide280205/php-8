@@ -9,15 +9,10 @@
 
 <main class="container">   
 
-<h1>Opere in prestito</h1>
+<h1>Opere in Italia</h1>
 
 
-<p><a href="index.php?action=loadForm">Aggiungi una nuova opera</a></p>
-
-<p><a href="index.php?action=destItalia">Mostra le opere che vanno in Italia</a></p>
-
-<p><a href="index.php">Torna alla lista delle opere</a></p>
-
+<p><a href="index.php?action=destItalia">Mostra le opere dell'Italia</a></p>
 
 
 <table class="striped">
